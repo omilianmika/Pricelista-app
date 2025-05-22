@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { PackageInfo } from './components/PackageInfo'
 
 // Pricing tiers and data
 const tiers = [
@@ -63,6 +64,7 @@ export default function App() {
 
   return (
     <div className="pricelist-container modern-bg">
+      <PackageInfo />
       <div className="main-steps-grid">
         <div className="step-col">
           <h1 className="main-title">Prislista Kalkylator</h1>

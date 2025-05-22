@@ -621,3 +621,82 @@ h1 {
   vertical-align: middle;
   font-weight: 400;
 }
+
+.package-info-container {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.package-box {
+  background: linear-gradient(120deg, #e0f7ef 60%, #e6f0ff 100%);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(90,209,255,0.07);
+  border: 1.5px solid #b2d8d8;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.package-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(90,209,255,0.12);
+}
+
+.package-title {
+  color: #1a3c34;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #3ad29f;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.package-feature {
+  color: #1a3c34;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.package-feature:before {
+  content: "•";
+  color: #3ad29f;
+  font-weight: bold;
+  margin-right: 12px;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .package-box {
+    padding: 24px;
+  }
+  
+  .package-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .package-feature {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
